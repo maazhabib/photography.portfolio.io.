@@ -260,7 +260,7 @@
         <section>
             <div class="row row-cols-1 row-cols-lg-2 w-100 m-0">
                 <div class="col p-0">
-                        <a class="image-gallery" href="image/images/Women_forest.jpg" data-fslightbox="gallery">
+                        <a class="image-gallery" href="image/images/modal/Women_forest.jpg" data-fslightbox="gallery">
                         <div class="image-gallery-container">
                             <div class="image-gallery__image">
                                 <img src="image/images/Women_forest.jpg" alt="" class="img-fluid w-100">
@@ -275,7 +275,7 @@
                 <div class="col p-0">
                     <div class="row row-cols-1 row-cols-lg-2 w-100 m-0">
                         <div class="col p-0">
-                            <a class="image-gallery" href="image/images/Nature_Mental.jpg" data-fslightbox="gallery">
+                            <a class="image-gallery" href="image/images/modal/Nature_Mental.jpg" data-fslightbox="gallery">
                                 <div class="image-gallery-container">
                                     <div class="image-gallery__image">
                                         <img src="image/images/Nature_Mental.jpg" alt="" class="img-fluid w-100">
@@ -288,7 +288,7 @@
                             </a>
                         </div>
                         <div class="col p-0">
-                            <a class="image-gallery" href="image/images/Sexy_Beautiful_Redhead_Girl.jpg" data-fslightbox="gallery">
+                            <a class="image-gallery" href="image/images/modal/Sexy_Beautiful_Redhead_Girl.jpg" data-fslightbox="gallery">
                                 <div class="image-gallery-container">
                                     <div class="image-gallery__image">
                                         <img src="image/images/Sexy_Beautiful_Redhead_Girl.jpg" alt="" class="img-fluid w-100">
@@ -301,7 +301,7 @@
                             </a>
                         </div>
                         <div class="col p-0">
-                            <a class="image-gallery" href="image/images/Beauty_American.jpg" data-fslightbox="gallery">
+                            <a class="image-gallery" href="image/images/modal/Beauty_American.jpg" data-fslightbox="gallery">
                                 <div class="image-gallery-container">
                                     <div class="image-gallery__image">
                                         <img src="image/images/Beauty_American.jpg" alt="" class="img-fluid w-100">
@@ -314,7 +314,7 @@
                             </a>
                         </div>
                         <div class="col p-0">
-                            <a class="image-gallery" href="image/images/Beautiful_Eyes.jpg" data-fslightbox="gallery">
+                            <a class="image-gallery" href="image/images/modal/Beautiful_Eyes.jpg" data-fslightbox="gallery">
                                 <div class="image-gallery-container">
                                     <div class="image-gallery__image">
                                         <img src="image/images/Beautiful_Eyes.jpg" alt="" class="img-fluid w-100">
@@ -674,7 +674,7 @@
             </div>
         </section>
 
-        <section class="section position-relative" style="background-image: url(image/dummy-img-1920x900.jpg);">
+        <section class="section position-relative" style="background-image: url(image/images/talk.jpg);">
             <div class="r-container">
                 <div class="row row-cols-1 row-cols-lg-2">
                     <div class="col">
@@ -704,7 +704,7 @@
                 <div class="d-flex flex-column-reverse flex-lg-row w-100">
                     <div class="col">
                         <div class="position-relative mb-3">
-                            <img src="image/dummy-img-1920x900.jpg" alt="" class="img-fluid img-filter">
+                            <img src="image/images/touch.jpg" alt="" class="img-fluid img-filter">
                             <div class="overlay">
                                 <h2 class="font-1" sty>GET IN TOUCH</h2>
                             </div>
@@ -895,7 +895,20 @@
         </section>
     </footer>
 
-    <script src="js/vendor/fslightbox.js"></script>
+<!--    modal -->
+
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-body bg-light">
+                    <img id="modalImage" src="" class="img-fluid w-100" alt="Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--    <script src="js/vendor/fslightbox.js"></script>-->
+    <script src="js/modal.js"></script>
 </body>
 
 </html>
