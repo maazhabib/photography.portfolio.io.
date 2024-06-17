@@ -44,17 +44,20 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="about.html">About</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
-                                    data-bs-auto-close="outside" aria-expanded="false">
-                                    Portfolio
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item active" href="portfolio_standard.html">Portfolio Standard</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="portfolio_grid.html">Portfolio Grid</a></li>
-                                </ul>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="portfolio_standard.html">Portfolio Standard</a>
                             </li>
+<!--                            <li class="nav-item dropdown">-->
+<!--                                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"-->
+<!--                                    data-bs-auto-close="outside" aria-expanded="false">-->
+<!--                                    Portfolio-->
+<!--                                </a>-->
+<!--                                <ul class="dropdown-menu">-->
+<!--                                    <li><a class="dropdown-item active" href="portfolio_standard.html">Portfolio Standard</a>-->
+<!--                                    </li>-->
+<!--                                    <li><a class="dropdown-item" href="portfolio_grid.html">Portfolio Grid</a></li>-->
+<!--                                </ul>-->
+<!--                            </li>-->
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                     data-bs-auto-close="outside" aria-expanded="false">
@@ -77,12 +80,12 @@
                                     <li><a class="dropdown-item" href="404.html">404 Page</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item">
-                                <a href="contact.html" class="nav-link">Contact Us</a>
-                            </li>
+<!--                            <li class="nav-item">-->
+<!--                                <a href="contact.html" class="nav-link">Contact Us</a>-->
+<!--                            </li>-->
                         </ul>
                         <div>
-                            <a type="button" href="" class="font-2">BOOK NOW</a>
+                            <a type="button" href="contact.html" class="font-2">Contact Us</a>
                         </div>
                     </div>
                 </div>
@@ -92,7 +95,7 @@
     <!-- End Of Header -->
 
     <main>
-        <section class="position-relative" style="background-image: url(image/dummy-img-1920x900.jpg);">
+        <section class="position-relative" style="background-image: url(image/images/portfolio_stand/portfolio.jpg);">
             <div class="r-container">
                 <div class="image-overlay-2"></div>
                 <div class="d-flex flex-column justify-content-center align-items-center text-center position-relative min-vh-65"
@@ -100,7 +103,7 @@
                     <h1 class="text-white font-1">PORTFOLIO</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Portfolio Standard</li>
                         </ol>
                     </nav>
@@ -111,8 +114,8 @@
         <section class="section">
             <div class="r-container">
                 <div class="row row-cols-1 row-cols-lg-4">
-                    <a class="col mb-4" href="image/dummy-img-600x400.jpg" data-fslightbox="gallery">
-                        <img src="image/dummy-img-600x400.jpg" alt=""  class="img-fluid img-filter-1">
+                    <a class="col mb-4" href="#" data-toggle="modal" data-target="#imageModal" data-image="image/dummy-img-600x400.jpg">
+                        <img src="image/dummy-img-600x400.jpg" alt="" class="img-fluid img-filter-1">
                     </a>
                     <a class="col mb-4" href="image/dummy-img-600x400.jpg" data-fslightbox="gallery">
                         <img src="image/dummy-img-600x400.jpg" alt=""  class="img-fluid img-filter-1">
@@ -230,8 +233,29 @@
             </div>
         </section>
     </footer>
-    
+
+<!--    image modal-->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-body bg-dark">
+                    <img id="modalImage" src="" class="img-fluid" alt="Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/vendor/fslightbox.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#imageModal').on('show.bs.modal', function(event) {
+                var button = $(event.relatedTarget); // Button that triggered the modal
+                var imageSrc = button.data('image'); // Extract info from data-* attributes
+                var modal = $(this);
+                modal.find('#modalImage').attr('src', imageSrc);
+            });
+        });
+    </script>
 </body>
 
 </html>
